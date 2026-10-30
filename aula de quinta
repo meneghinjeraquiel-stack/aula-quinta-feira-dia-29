@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <script>
+
+        // MUDAR AS CORES E CENTRALIZAR
+
+        document.body.style.textAlign = "center";
+
+        document.querySelector("header").style.backgroundColor = "green";
+
+        document.querySelector("nav").style.backgroundColor = "white";
+
+
+        // SELECIONAR O ELEMENTO MAIN
+
+        const main = document.getElementById("conteudo");
+
+        main.style.backgroundColor = "#f0f0f0";
+
+
+        // CRIAR UM TÍTULO
+
+        const titulo = document.createElement("h1");
+
+        titulo.textContent = "Conheça a Itália";
+
+        main.appendChild(titulo);
+
+
+        // CRIAR UM PARÁGRAFO
+
+        const paragrafo = document.createElement("p");
+
+        paragrafo.textContent = "A Itália é um país da Europa conhecido por sua cultura, história e comidas.";
+
+        main.appendChild(paragrafo);
+
+
+        // CRIAR OUTRO PARÁGRAFO
+
+        const paragrafo2 = document.createElement("p");
+
+        paragrafo2.textContent = "A capital da Itália é Roma, uma cidade muito famosa.";
+
+        main.appendChild(paragrafo2);
+
+
+        // CRIAR UMA IMAGEM
+
+        const imagem = document.createElement("img");
+
+        imagem.src = "https://flagcdn.com/w320/it.png";
+
+        imagem.alt = "Bandeira da Itália";
+
+        imagem.style.width = "250px";
+
+
+        // CENTRALIZAR A BANDEIRA
+
+        imagem.style.display = "block";
+
+        imagem.style.margin = "20px auto";
+
+        main.appendChild(imagem);
+
+
+        // CRIAR UMA LISTA ORDENADA
+
+        const lista = document.createElement("ol");
+
+
+        // CENTRALIZAR A LISTA ABAIXO DA BANDEIRA
+
+        lista.style.width = "fit-content";
+
+        lista.style.margin = "20px auto";
+
+        lista.style.textAlign = "left";
+
+        lista.style.paddingLeft = "40px";
+
+
+        // PRIMEIRO ITEM
+
+        const item1 = document.createElement("li");
+
+        item1.textContent = "Sua arquitetura é muito bonita.";
+
+        lista.appendChild(item1);
+
+
+        // SEGUNDO ITEM
+
+        const item2 = document.createElement("li");
+
+        item2.textContent = "A Itália é famosa pela pizza.";
+
+        lista.appendChild(item2);
+
+
+        // TERCEIRO ITEM
+
+        const item3 = document.createElement("li");
+
+        item3.textContent = "O Coliseu fica na Itália.";
+
+        lista.appendChild(item3);
+
+
+        // ADICIONAR A LISTA AO MAIN
+
+        main.appendChild(lista);
+
+    </script>
+
+</body>
+
+</html>
